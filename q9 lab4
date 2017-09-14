@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+void perfect(int n1, int n2){
+	int sum, i, j;
+	for(i=n1; i<n2; i++)
+	{
+		sum=0;
+		j=1;
+	while(j<i)
+	{
+	if(i%j==0){
+	sum = sum + j;
+	}
+	j = j + 1;
+	}
+	if(sum == i)
+	{
+		cout << i << " ";
+	}
+	}
+}
+int main() {
+	int n1, n2;
+	cout << "Enter a starting number of  the interval to find perfect numbers\n";
+	cin >> n1;
+	cout << "Enter the ending point.\n";
+	cin >> n2;
+	perfect(n1,n2);
+	
+	return 0;
+}
