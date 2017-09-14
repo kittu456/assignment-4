@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+void prime(int n1, int n2){
+	int i, j;
+	bool prime;
+	cout << "Prime numbers between " << n1 << " and " << n2 << " are 2 ";
+	for(i=n1; i<=n2; i++)
+	{
+	for(j=2; j<i; j++)
+	{
+		if(i%j==0)
+		{
+			prime=false;
+			break;
+		}
+		else
+		{
+			prime=true;
+		}
+	}
+	if(prime==true)
+	{ 
+		cout << i << " ";
+	}
+	}
+}
+int main() {
+	int n1, n2;
+	cout << "Enter a starting number of  the interval to find prime numbers";
+	cin >> n1;
+	cout << "Enter the ending point.";
+	cin >> n2;
+	prime(n1,n2);
+	
+	return 0;
+}
