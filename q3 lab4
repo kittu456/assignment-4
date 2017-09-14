@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+float max(float a, float b){
+	if(a>b)
+	{
+		return a;
+	}
+	else
+	{
+	return b;
+}
+}
+float min(float a, float b){
+	if(a>b)
+	{
+		return b;
+	}
+	else
+	{
+		return a;
+	}
+}
+
+
+int main() {
+	float a, b;
+	cout << "Enter two numbers";
+	cin >> a >> b;
+	cout << " The maximum number is " << max(a,b) << " and minimum number is " << min(a,b);
+	
+	return 0;
+}
