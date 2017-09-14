@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+void armstrong(int n1, int n2){
+	int x, rem, sum, i;
+	cout << "The armstrong numbers are ";
+	for(i=n1; i<=n2; i++)
+	{
+		sum = 0;
+		x=i;
+	while(x!=0)
+	{
+		rem = x%10;
+		sum = sum + rem*rem*rem;
+		x=x/10;
+	}
+	if(sum == i)
+	{
+		cout<<  i <<" ";
+	}
+	}
+}
+int main() {
+	int n1, n2;
+	cout << "Enter a starting number of  the interval to find armstrong numbers\n";
+	cin >> n1;
+	cout << "Enter the ending point.\n";
+	cin >> n2;
+	armstrong(n1,n2);
+	
+	return 0;
+}
