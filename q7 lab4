@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+void strong(int nu1, int nu2){
+	int rem, n1, i, num, number, j, x;
+	cout << "The strong numbers are ";
+	for(j=nu1; j<nu2; j++)
+	{ 
+		x=j;
+		num=0;
+	while(x!=0)
+	{
+	rem = x%10;
+	n1=1;
+	for(i=1; i<=rem; i++)
+	{
+		n1=n1*i;
+	}
+	x=x/10;
+	num = num + n1;
+	}
+	if(num == j)
+	{
+		cout << j << " ";
+	}
+	}
+}
+int main() {
+	int n1, n2;
+	cout << "Enter a starting number of  the interval to find armstrong numbers\n";
+	cin >> n1;
+	cout << "Enter the ending point.\n";
+	cin >> n2;
+	strong(n1,n2);
+	
+	return 0;
+}
